@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.panel {
+  border-left: 1px solid #ddd;
+  padding: 12px;
+}
