@@ -21,7 +21,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: basthon-src
-        run: yarn install
+        run: yarn install --no-immutable
 
       - name: Build Basthon
         working-directory: basthon-src
