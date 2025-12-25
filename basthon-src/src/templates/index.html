@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <title>Basthon Notebook</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="<%=require('../../notebook/static/base/images/favicon-notebook.ico')%>"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      var sys_info = <%= JSON.stringify(htmlWebpackPlugin.options.sys_info) %>;
+    </script>
+    <script
+      type="text/javascript"
+      src="assets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full,Safe&delayStartupUntil=configured"
+      async
+    ></script>
+  </head>
+  <body></body>
+</html>
