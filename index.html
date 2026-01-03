@@ -1,26 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Python AI Coach</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Python VO</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+    }
+    iframe {
+      border: none;
+    }
+    #notebook {
+      width: 65%;
+    }
+    #coach {
+      width: 35%;
+      padding: 1rem;
+      border-left: 1px solid #ccc;
+    }
+  </style>
 </head>
 <body>
-  <div class="layout">
-    <iframe
-      id="basthon"
-      src="./basthon/notebook/"
-      title="Basthon Notebook"
-    ></iframe>
 
-    <aside class="panel">
-      <h2>AI Coach</h2>
-      <div id="status">Waiting for notebook…</div>
-      <div id="feedback">Run code to get feedback.</div>
-    </aside>
+  <!-- LEFT: Jupyter notebook -->
+  <iframe
+    id="notebook"
+    src="jupyterlite/index.html?path=files/lesson1.ipynb">
+  </iframe>
+
+  <!-- RIGHT: AI coach -->
+  <div id="coach">
+    <h2>AI Coach</h2>
+    <p>Run the code on the left to get feedback.</p>
   </div>
 
-  <script src="app.js"></script>
 </body>
 </html>
